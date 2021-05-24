@@ -30,6 +30,7 @@
 	/* Fonts size */
 	--h1-font-size: 2rem;
 	--h2-font-size: 1.5rem;
+	--h3-font-size: 1.25rem;
 	--font-size: 1rem;
 	--small-font-size: .85rem;
 
@@ -47,6 +48,7 @@
 		/* Fonts size */
 		--h1-font-size: 2.5rem;
 		--h2-font-size: 1.75rem;
+		--h3-font-size: 1.50rem;
 		--font-size: 1.1rem;
 		--small-font-size: .95rem;
 
@@ -85,7 +87,6 @@ body {
 	z-index: 1000;
 }
 .container {
-	border: 1px solid #fff;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
@@ -97,6 +98,19 @@ body {
 .title {
 	text-align: center;
 	font: var(--h1-font-size) var(--font-titles);
+}
+.img {
+	height: var(--height-table);
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.subtitle {
+	font: var(--h2-font-size) var(--font-titles);
+	text-align: center;
+}
+.third-title {
+	font: var(--h3-font-size) var(--font-titles);
 }
 
 .group{
@@ -137,7 +151,10 @@ body {
 	display: block;
 	height: 100%;
 }
-
+.footer {
+	display: block;
+	height: auto;
+}
 .footer .group {
 	height: auto;
 }
@@ -156,9 +173,9 @@ body {
 .link {
 	color: var(--first-color);
 	display: block;
-	margin: 0;
 	text-decoration: none;
 	text-align: center;
+	margin: 0;
 }
 .link:hover {
 	text-decoration: underline;
@@ -305,6 +322,8 @@ body {
 @media screen and ( min-width: 32rem ) {
 	.link {
 		text-align: left;
+		display: inline-block;
+		padding: .5rem 1rem;
 	}
 
 	.navegation {

@@ -1,34 +1,19 @@
+
 <?php
-	use Dompdf\Dompdf ;
+
 	require_once 'dompdf/autoload.inc.php';
-	use Dompdf\Options;
+	use Dompdf\Dompdf;
 
-
-	require_once './conexion.php';
-
-	$conn = connect('school');
-
-	$query = $conn->prepare("SELECT * FROM estudiante");
-	$query->execute();
-
-	$results = $query->fetchAll(PDO::FETCH_ASSOC);
-
-?>
-
-
-
-<?php
-
-
-	$pdf = new Dompdf();
-	
 	ob_start();
-	
 
-	
-	
-	$pdf->set_paper("A4", "portrait");
-	$pdf->render();
-	$pdf->stream('FicheroEjemplo.pdf');
+	include_once './pdf.php';
+	$code = ob_get_clean();
 
+	$pdf = new Dompdf(); // Creamos el objeto $dompdf
+
+	$pdf->load_html($code); // Cargamos el contenido html
+	$pdf->set_paper("A4", "landscape"); // Configuración de página
+	$pdf->render(); // Renderización
+	// $pdf->stream('FicheroEjemplo.pdf'); // Descargamos el pdf automaticamente
+	$pdf->stream('FicheroEjemplo.pdf', array('Attachment'=>0)); // Previsualizar el pdf
 ?>

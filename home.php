@@ -14,7 +14,7 @@
 	<section class='navegation'>
 		<div class="navegation__field">
 			<a href="./form-register.php" class='button button-new'>Nuevo</a>
-			<a href="#" class='button button-report'>Reporte</a>
+			<a href="./components/report.php" class='button button-report' target='_blanc'>Reporte</a>
 		</div>
 
 		<div class="navegation__field">
