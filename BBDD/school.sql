@@ -23,8 +23,6 @@ insert into estudiante values (null, 'jean paul', 'martinez c', 'Desarrollo de S
 select * from estudiante;
 
 
-SELECT FROM estudiante WHERE codigo = 10002;
-
 
 
 
