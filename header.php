@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Crud - DomPDF</title>
 		<link rel="shortcut icon" href="./assets/icons/puri-logo.svg" type="image/x-icon">
+		<link rel="stylesheet" href="./css/my-normalize.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
 	</head>
 	<body>
