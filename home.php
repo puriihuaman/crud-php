@@ -24,40 +24,40 @@
 	</section>
 
 
-	<div class="grid" id='grid'>
-		<div class="grid__content">
-			<div class="grid__header">
-				<div class="grid__row">
-					<p class='grid__head'>Codigo</p>
-					<p class='grid__head'>Nombres</p>
-					<p class='grid__head'>Apellidos</p>
-					<p class='grid__head'>Carrera</p>
-					<p class='grid__head'>Email</p>
-					<p class='grid__head'>Telefono</p>
-					<p class='grid__head'></p>
-					<p class='grid__head'></p>
-				</div>
-			</div>
+	<div class="table-container" id='grid'>
+		<table class="table">
+			<thead class="table__header">
+				<tr class="table__row">
+					<td class='table__head'>Codigo</td>
+					<td class='table__head'>Nombres</td>
+					<td class='table__head'>Apellidos</td>
+					<td class='table__head'>Carrera</td>
+					<td class='table__head'>Email</td>
+					<td class='table__head'>Telefono</td>
+					<td class='table__head'></td>
+					<td class='table__head'></td>
+				</tr>
+			</thead>
 				
-			<div class="grid__body">
+			<tbody class="table__body">
 				<?php foreach( $results as $result) { ?>
-				<div class="grid__row">
-					<p class='grid__data'><?php echo $result['codigo']; ?></p>
-					<p class='grid__data'><?php echo $result['nombres']; ?></p>
-					<p class='grid__data'><?php echo $result['apellidos']; ?></p>
-					<p class='grid__data'><?php echo $result['carrera']; ?></p>
-					<p class='grid__data'><?php echo $result['email']; ?></p>
-					<p class='grid__data'><?php echo $result['telefono']; ?></p>
-					<p class='grid__data'>
+				<tr class="table__row">
+					<td class='table__data'><?php echo $result['codigo']; ?></td>
+					<td class='table__data'><?php echo $result['nombres']; ?></td>
+					<td class='table__data'><?php echo $result['apellidos']; ?></td>
+					<td class='table__data'><?php echo $result['carrera']; ?></td>
+					<td class='table__data'><?php echo $result['email']; ?></td>
+					<td class='table__data'><?php echo $result['telefono']; ?></td>
+					<td class='table__data'>
 						<a href="edit.php?codigo=<?php echo $result['codigo']; ?>" class='button-update'>Actualizar</a>
-					</p>
-					<p class='grid__data'>
+					</td>
+					<td class='table__data'>
 						<a href="./components/delete.php?codigo=<?php echo $result['codigo']; ?>" class='button-delete'>Eliminar</a>
-					</p>
-				</div>
+					</td>
+				</tr>
 				<?php } ?>
-			</div>
-		</div>
+			</tbody>
+		</table>
 	</div>
 
 <?php include_once 'footer.php'; ?>
