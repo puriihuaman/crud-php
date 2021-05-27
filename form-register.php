@@ -32,7 +32,7 @@
 
 		<div class='form__field'>
 			<input type="submit" value="Guardar" id='button-save' class='button button-save'>
-			<a href="./" class='button'>Volver</a>
+			<a href="./" class='button button-return'>Volver</a>
 		</div>
 	</form>
 </div>

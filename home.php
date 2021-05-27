@@ -24,7 +24,7 @@
 	</section>
 
 
-	<div class="table-container" id='grid'>
+	<div class="table-container">
 		<table class="table">
 			<thead class="table__header">
 				<tr class="table__row">
@@ -49,10 +49,10 @@
 					<td class='table__data'><?php echo $result['email']; ?></td>
 					<td class='table__data'><?php echo $result['telefono']; ?></td>
 					<td class='table__data'>
-						<a href="edit.php?codigo=<?php echo $result['codigo']; ?>" class='button-update'>Actualizar</a>
+						<a href="edit.php?codigo=<?php echo $result['codigo']; ?>" class='button button-update'>Actualizar</a>
 					</td>
 					<td class='table__data'>
-						<a href="./components/delete.php?codigo=<?php echo $result['codigo']; ?>" class='button-delete'>Eliminar</a>
+						<a href="./components/delete.php?codigo=<?php echo $result['codigo']; ?>" class='button button-delete'>Eliminar</a>
 					</td>
 				</tr>
 				<?php } ?>

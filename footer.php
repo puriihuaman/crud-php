@@ -2,7 +2,7 @@
 			</div>
 		</main>
 
-		<footer class="footer">
+		<footer class="main-footer">
 			<div class="container">
 				<div class="group">
 					<div class="group__grid">
